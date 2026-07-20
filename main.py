@@ -10,7 +10,7 @@ import time
 app = Flask(__name__)
 # แสดง JSON ตามลำดับที่เขียนไว้ใน Dictionary
 app.json.sort_keys = False
-limiter = Limter(
+limiter = Limiter(
     key_func=get_remote_address,
     app=app,
     default_limits=[],
