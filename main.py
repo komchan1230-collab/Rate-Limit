@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-import flask_limiter import Limiter
+from flask_limiter import Limiter
 import flask_limiter.util import get_remote_address
 import hashlib
 import hmac
