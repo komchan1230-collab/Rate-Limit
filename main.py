@@ -18,7 +18,7 @@ limiter = Limiter(
     headers_enabled=True
 )
 
-WORK_FACTOR = 2_000 ##---------##
+WORK_FACTOR = 2_000_000 ##---------##
 PASSWORD_LENGTH = 10
 SALT_SIZE_BYTES = 16
 
@@ -50,9 +50,9 @@ def home():
 
 
 @app.route("/login-check")
-@limiter.limit("5 per second")
+#@limiter.limit("5 per second")
 
-#@limiter.limit("10 per minute")
+@limiter.limit("10 per minute")
 def login_check():
     start_time = time.perf_counter()
 
